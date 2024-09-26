@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+#titulo{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+
+    background-color: rgba(0, 0, 0, 0.379);
+    border-radius: 10px;
+    height: 30px;
+    width: 400px;
+    padding: 20px;
+
+}
+
+#time{
+display: flex;
+justify-content: center;
+padding: 3rem;
+
+}
+#time div p{
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+background-color: rgba(44, 31, 31, 0.612);
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+
+}
+
+/*
+si queda mas de un mes
+*/
+.colorVerde{
+color: rgb(0, 255, 0);
+}
+
+/*
+si queda menos de dos semanas
+*/
+.colorNaranja{
+color: orange;
+}
+
+/*
+si queda menos de una semana
+*/
+.colorRojo{
+color: red;
+}
