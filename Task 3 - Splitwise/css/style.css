@@ -1,0 +1,109 @@
+body{
+    background-image: linear-gradient(242deg, #121734, #553f55, #996d78, #e19e9d);
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;    
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    background-color: white;
+    width: 400px;
+    height: 600px;
+    border: 20px solid #5a2ea6;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem; 
+}
+
+header {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+}
+
+main {
+    flex-grow: 1;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    gap: 10px;
+}
+
+/* Reset style button */
+button {
+    border: none;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+.buttonLink, 
+button[type="submit"] {
+    background-color: #5a2ea6;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    line-height: 1.5; 
+    box-sizing: border-box; 
+}
+
+.buttonLink:hover,
+button[type="submit"]:hover {
+    background-color: #4a2388;
+}
+
+
+.buttonLink:hover {
+    background-color: #4a2388;
+}
+
+.buttonAdd {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #5a2ea6;
+    color: white;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.buttonAdd:hover {
+    background-color: #4a2388;
+}

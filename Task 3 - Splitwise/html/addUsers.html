@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Users</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/addUser.css">
+
+    <script type="module" src="../js/addUsers.js" defer></script>
+</head>
+<body>
+    <div class="card">
+        <header><h2>Add Users</h2></header>
+
+        <main>
+            <form id="myForm">
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required><br><br>
+
+                    <input type="radio" id="genderMale" name="gender" value="male" checked>
+                    <label for="male">Male</label>
+                    <br>
+
+                    <input type="radio" id="genderFemale" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <br>
+                </div>
+                <div>
+                    <p>Icon</p>
+                    <img src="../img/Icon 1.jpg" alt="Icon 1" class="imgCircle">
+                    <img src="../img/Icon 2.jpg" alt="Icon 2" class="imgCircle">
+                    <img src="../img/Icon 3.jpg" alt="Icon 3" class="imgCircle">
+                    <img src="../img/Icon 4.jpg" alt="Icon 4" class="imgCircle">
+                </div>
+        </main>
+                <footer>
+                    <a href="users.html" class="buttonLink">Users</a>
+                    <button type="submit" class="buttonLink">Confirm</button>
+                </footer>
+            </form>
+        
+    </div>
+</body>
+</html>
