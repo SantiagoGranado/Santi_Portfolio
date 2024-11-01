@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <main>
+        <nav>
+            <form>
+                <label for="title">Title</label>
+                <input type="text" id="title" maxlength="10">
+            
+                <input type="range" class="slider x" min="0" max="100">
+                <input type="range" class="slider y" min="0" max="100">
+            
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="color" checked> Black
+                    </label>
+                    <label>
+                        <input type="radio" name="color"> White
+                    </label>
+                </div>
+            </form>
+            <div id="images">
+                <p id="imagesP"></p>
+                <img src="./img/chamber.png" alt="chamber" draggable="true">
+                <img src="./img/cipher.png" alt="cipher" draggable="true">
+                <img src="./img/jett.png" alt="jett" draggable="true">
+                <img src="./img/killjoy.png" alt="killjoy" draggable="true">
+                <img src="./img/phoenix.png" alt="phoenix" draggable="true">
+                <img src="./img/raze.png" alt="raze" draggable="true">
+                <img src="./img/reyna.png" alt="reyna" draggable="true">
+                <img src="./img/sage.png" alt="sage" draggable="true">
+                <img src="./img/skye.png" alt="skye" draggable="true">
+                <img src="./img/sova.png" alt="sova" draggable="true">
+                <img src="./img/viper.png" alt="viper" draggable="true">
+                <img src="./img/yoru.png" alt="yoru" draggable="true">
+            </div>
+        </nav>
+        <article>
+            <div id="textPosition">
+                <p id="titleTS"></p>
+            </div>
+            <img id="white" src="./img/white.jpg" alt="white">
+            <img id="black" src="./img/black.jpg" alt="black">
+            
+            <h2>Custom your T-Shirt</h2>
+
+            <span id="spanColor"></span>
+        </article>
+    </main>
+</body>
+</html>
