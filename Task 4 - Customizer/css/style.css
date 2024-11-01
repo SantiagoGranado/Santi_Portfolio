@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --primary-color: #4B0082;
+    --secondary-color: #8A2BE2;
+    --background-color: #42424d;
+    --section-background: #2A2A40;
+    --text-color: #E0E0E0;
+    --accent-color: #FF4500;
+}
+.creepster-regular {
+    font-family: "Creepster", system-ui;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+}
+body{
+    font-family: "Nunito", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+main{
+    display: flex;
+    background-color: var(--section-background);
+    width: 154vh;
+    height: 90vh;
+    border: 2px solid black;
+    border-radius: 14px;
+    box-shadow: 8px 8px 18px black;
+}
+h1, h2, h3 {
+    font-family: "Roboto Condensed", sans-serif;
+    color: var(--secondary-color);
+}
+nav{
+    width: 30%;
+    height: 100%;
+    border-radius: 12px 0 0 12px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+article{
+    width: 70%;
+    height: 100%;
+    border-radius: 0 12px 12px 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px;
+    
+}
+form {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    padding: 22px;
+    height: 40%;
+}
+form label {
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: block;
+}
+input[type="text"] {
+    background-color: var(--background-color);
+    color: var(--text-color); 
+    border: 1px solid var(--secondary-color); 
+    padding: 8px;
+    border-radius: 5px;
+}
+.slider {
+    width: 100%;
+    margin: 12px 0; 
+    
+}
+.radio-group {
+    margin-top: 8px;
+}
+.radio-group label {
+    font-weight: normal;
+}
+#images{
+    padding: 22px;
+    height: 55%;
+    width: 46vh;
+    overflow: auto;
+    
+}
+#images img{
+    margin-top: 12px;
+    height: 192px;
+    border: double rgb(110, 110, 110);
+}
+#white, #black{
+    width: 78vh;
+}
+article h2{
+    margin-bottom: 4px; 
+}
+.logo {
+    height: 28%;
+    position: absolute;
+    margin-top: 32vh; 
+}
+.logo {
+    z-index: 1; 
+    filter: drop-shadow(0 0 2px rgba(255, 165, 0, 0.5)) 
+            drop-shadow(0 0 5px rgba(255, 165, 0, 0.4))
+            drop-shadow(0 0 8px rgba(255, 0, 0, 0.3))  
+            drop-shadow(0 0 10px rgba(255, 0, 0, 0.2))
+            drop-shadow(0 0 15px rgba(255, 0, 0, 0.1)); 
+
+            /*No use el box-shadow por que no me funcionaba*/
+}
+
+.miniLogo{
+    height: 10%;
+    position: absolute;
+    margin-top: 18vh;
+    margin-left: 24vh;
+    transform: scaleX(-1);
+}
+#textPosition{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin-top: 18vh;
+    margin-right: 20vh;
+}
+#titleTS{
+    position: absolute;
+}
+article span{
+    position: absolute;
+    margin-top: 63vh;
+    color: var(--text-color);
+}
+.colorBlack {
+    color: black;
+}  
+.colorWhite {
+    color: white;
+}
+@media (max-width: 480px) {
+    body {
+        width: 460px;
+    }
+    main{
+        width: 460px;
+        height: 190vh;
+        flex-direction: column;
+    }
+    nav{
+        width: 100%;
+        height: 55%;
+    }
+    #images{
+        width: 100%;
+    }
+    input[type="text"]{
+        width: 100%;
+    }
+    article{
+        justify-content: center;
+        margin-left: 10vh;
+        
+    }
+    #white, #black{
+        width: 70vh;
+    }
+    .logo{
+        margin-bottom: 30vh;
+    }
+    .miniLogo{
+        margin-bottom: 50vh;
+    }
+    #spanColor{
+        margin-bottom: 24vh;
+    }
+    #textPosition{
+        margin-bottom: 50vh;
+        margin-left: -2vh;
+    }
+    #textPosition p{
+        z-index: 1;
+    }
+}
+
