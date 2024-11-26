@@ -4,12 +4,12 @@ import { DatabaseManager } from './db.js';
 const dbManager = DatabaseManager.getInstance();
 let zIndexValue = 1;
 
-// Referencias DOM
+// DOM References
 const colorPicker = document.getElementById('noteColor');
 const addButton = document.getElementById('addButton');
 const mainElement = document.querySelector('main');
 
-// Inicialización
+// Initialization
 async function init() {
     try {
         await dbManager.open();
@@ -20,7 +20,7 @@ async function init() {
     }
 }
 
-// Cargar notas guardadas
+// Load saved notes
 async function loadSavedNotes() {
     try {
         const notes = await dbManager.getAllNotes();
@@ -30,7 +30,7 @@ async function loadSavedNotes() {
     }
 }
 
-// Crear nota desde datos
+// Create note from data
 function createNoteFromData(noteData) {
     const newNote = createNoteElement(noteData.color);
     newNote.id = `note-${noteData.id}`;
@@ -41,7 +41,7 @@ function createNoteFromData(noteData) {
     mainElement.appendChild(newNote);
 }
 
-// Crear elemento de nota
+// Create note element
 function createNoteElement(color = null) {
     const newNote = document.createElement("div");
     newNote.classList.add("note");
@@ -62,7 +62,7 @@ function createNoteElement(color = null) {
     return newNote;
 }
 
-// Configurar arrastre de notas
+// Setup note drag functionality
 function setupNoteDrag(noteElement) {
     let isDragging = false;
     let currentX;
@@ -107,7 +107,7 @@ function setupNoteDrag(noteElement) {
     }
 }
 
-// Obtener datos de la nota
+// Get note data
 function getNoteData(noteElement) {
     return {
         id: parseInt(noteElement.id.split('-')[1]),
@@ -119,7 +119,7 @@ function getNoteData(noteElement) {
     };
 }
 
-// Guardar posición de la nota
+// Save note position
 async function saveNotePosition(noteElement) {
     try {
         const noteData = getNoteData(noteElement);
@@ -129,9 +129,9 @@ async function saveNotePosition(noteElement) {
     }
 }
 
-// Configurar event listeners
+// Setup event listeners
 function setupEventListeners() {
-    // Crear nueva nota
+    // Create new note
     addButton.addEventListener('click', async () => {
         const newNote = createNoteElement();
         mainElement.appendChild(newNote);
@@ -146,7 +146,7 @@ function setupEventListeners() {
         }
     });
 
-    // Eliminar nota
+    // Delete note
     document.addEventListener('click', async (event) => {
         if (event.target.classList.contains('delete')) {
             const noteElement = event.target.closest('.note');
@@ -161,7 +161,7 @@ function setupEventListeners() {
         }
     });
 
-    // Guardar cambios en el texto
+    // Save text changes
     document.addEventListener('input', async (event) => {
         if (event.target.tagName === 'TEXTAREA') {
             const noteElement = event.target.closest('.note');
@@ -174,12 +174,12 @@ function setupEventListeners() {
         }
     });
 
-    // Cambio de color
+    // Color change
     colorPicker.addEventListener('input', function(e) {
         const selectedColor = e.target.value;
         document.querySelector('.noteHeader').style.backgroundColor = selectedColor;
     });
 }
 
-// Iniciar la aplicación cuando el DOM esté listo
+// Start the application when DOM is ready
 document.addEventListener('DOMContentLoaded', init);
