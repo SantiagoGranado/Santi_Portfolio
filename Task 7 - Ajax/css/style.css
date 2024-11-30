@@ -1,0 +1,166 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body and general layout */
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: #f5f5f5;
+}
+
+header {
+    background-color: #0078d4;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+/* Main content */
+main {
+    flex: 1;
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 1.5rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #0078d4;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+label {
+    flex: 1 1 100%;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+select,
+input[type="checkbox"],
+button {
+    flex: 1 1 auto;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+select {
+    width: 100%;
+}
+
+button {
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005bb5;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+    transform: scale(1.2);
+}
+
+/* Results section */
+#results {
+    margin-top: 2rem;
+  
+}
+.container{
+    border: #005bb5 solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+ul#gas-stations-list {
+    list-style: none;
+    padding: 0;
+}
+
+ul#gas-stations-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+ul#gas-stations-list li:last-child {
+    border-bottom: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+footer p {
+    margin: 0;
+}
+
+.expensive {
+    background-color: rgba(255, 0, 0, 0.1);
+    border: 2px solid red;
+}
+
+.cheap {
+    background-color: rgba(0, 255, 0, 0.1);
+    border: 2px solid green;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    form {
+        flex-direction: column;
+    }
+    main{
+        width: 100%;
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+    }
+}
