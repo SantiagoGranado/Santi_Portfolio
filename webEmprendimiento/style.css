@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --primary-color: #090ab2;
+    --acent-color: #ffd00d;
+    --text-color: #f9f9f6;
+}
+
+#counter {
+    background-color: var(--primary-color);
+    min-height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px;
+    color: var(--text-color);
+}
+
+#border {
+    border: 3px solid var(--acent-color);
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#title {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#title h1 {
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    line-height: 1.2;
+    animation: animDcha 1s ease-out;
+
+    span{
+        white-space: nowrap;
+    }
+}
+
+#title span {
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    white-space: nowrap;
+}
+
+#time {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.acent-color {
+    color: var(--acent-color);
+}
+
+.tick {
+    font-size: 1rem;
+    white-space: nowrap;
+    font-family: arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tick-group {
+    margin: 0 0.5em;
+    text-align: center;
+    animation: animArriba 0.5s ease-out;
+}
+
+.tick-flip,
+.tick-text-inline {
+    font-size: clamp(1.5rem, 4vw, 2.5em);
+}
+
+.tick-label {
+    margin-top: 0.5em;
+    font-size: clamp(0.8rem, 1.5vw, 1em);
+}
+
+.tick-char {
+    width: 1.5em;
+}
+
+.tick-text-inline {
+    display: inline-block;
+    text-align: center;
+    min-width: 1em;
+}
+
+.tick-text-inline+.tick-text-inline {
+    margin-left: -.325em;
+}
+
+.tick-credits {
+    display: none;
+}
+
+@keyframes animArriba {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animDcha {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    60% {
+        transform: translateX(30%);
+        opacity: 1;
+    }
+    80% {
+        transform: translateX(-10%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    #counter {
+        height: auto;
+        min-height: 500px;
+        padding: 20px;
+    }
+
+    #border {
+        flex-direction: column;
+        height: 100%;
+        padding: 20px;
+        gap: 40px;
+    }
+
+    #title {
+        width: 100%;
+        text-align: center;
+    }
+
+    #title h1, 
+    #title span {
+        align-items: center;
+        text-align: center;
+    }
+
+    #time {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .tick {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .tick-flip,
+    .tick-text-inline {
+        font-size: 2em;
+    }
+
+    .tick-group {
+        margin: 0 0.3em;
+    }
+}
