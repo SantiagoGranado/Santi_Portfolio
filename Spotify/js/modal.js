@@ -47,23 +47,29 @@ fileButtons.forEach((button, index) => {
         fileInputs[index].click();
     });
 
-    fileInputs[index].addEventListener('change', function() {
+    fileInputs[index].addEventListener('change', function () {
         const fileName = this.files[0]?.name || 'Select file';
         button.textContent = fileName;
     });
 });
 
-// Modal events
+// Modal events with animation
 addButton.addEventListener('click', () => {
     modal.style.display = 'block';
+    // Forzar reflow
+    modal.offsetHeight;
+    modal.classList.add('show');
 });
 
 function closeModal() {
-    modal.style.display = 'none';
-    form.reset();
-    fileButtons.forEach(button => {
-        button.textContent = 'Select file';
-    });
+    modal.classList.remove('show');
+    setTimeout(() => {
+        modal.style.display = 'none';
+        form.reset();
+        fileButtons.forEach(button => {
+            button.textContent = 'Select file';
+        });
+    }, 300); // 300ms = duración de la transición
 }
 
 closeButton.addEventListener('click', closeModal);
@@ -75,7 +81,7 @@ window.addEventListener('click', (event) => {
 });
 
 // Form submission handling
-form.addEventListener('submit', async function(event) {
+form.addEventListener('submit', async function (event) {
     event.preventDefault();
 
     const songFile = songFileInput.files[0];
@@ -109,7 +115,7 @@ form.addEventListener('submit', async function(event) {
         console.log('Success:', data);
         alert('Song uploaded successfully');
         closeModal();
-        
+
         // Reload songs list
         loadSongs();
     } catch (error) {
