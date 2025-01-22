@@ -1,0 +1,82 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  background-image: url('/img/background.jpg');
+  /* Ruta de la imagen */
+  background-size: cover;
+  /* Ajusta cómo se muestra la imagen */
+  background-position: center;
+  /* Centra la imagen */
+  background-repeat: no-repeat;
+  /* Evita que la imagen se repita */
+  color: rgb(216, 217, 218);
+  text-align: center;
+}
+
+#pokemon-list,
+#pokemon-team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #d6d6d6;
+  min-height: 100px;
+  color: black;
+  justify-content: center;
+}
+
+.pokemon-card img {
+  width: 70px;
+  height: 70px;
+}
+
+.error {
+  color: rgb(65, 247, 41);
+}
+
+#container {
+  width: 90%;
+  background-color: #00000080;
+  padding: 10px;
+  border-radius: 8px;
+
+}
+
+.pokemon-card {
+  background-color: rgb(130, 202, 181);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  border: black solid;
+}
+
+#guardar{
+  background-color: rgb(231, 231, 231);
+  padding: 10px;
+  border: rgb(197, 17, 17) solid;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#guardar:hover{
+  background-color: #ffacac;
+}
+#miDiv{
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.096);
+}
+#boton{
+  cursor: pointer;
+  background-color: rgb(231, 231, 231);
+  padding: 10px;
+  border: rgb(197, 17, 17) solid;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#boton:hover{
+  background-color: #ffacac;
+}
