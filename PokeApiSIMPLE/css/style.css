@@ -3,7 +3,7 @@ body {
   margin: 20px;
   display: flex;
   justify-content: center;
-  background-image: url('./img/background.jpg');
+  background-image: url('/img/background.webp');
   /* Ruta de la imagen */
   background-size: cover;
   /* Ajusta cómo se muestra la imagen */
