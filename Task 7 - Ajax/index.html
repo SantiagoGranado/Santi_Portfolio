@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Station Finder</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <script src="js/index.js" defer></script>
+
+    <script src="js/background.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Gas Station Finder</h1>
+    </header>
+    <main>
+        
+        <section id="filters">
+            <h2>Filters</h2>
+            <form id="filter-form">
+                
+                <label for="province">Province:</label>
+                <select id="province" name="province">
+                    <option value="">Select a province</option>
+                </select>
+
+                <label for="municipality">Municipality:</label>
+                <select id="municipality" name="municipality" disabled>
+                    <option value="">Select a municipality</option>
+                </select>
+
+                <label for="fuel_type">Fuel Type:</label>
+                <select id="fuel_type" name="fuel_type">
+                    <option value="">ALL</option>
+                    <option value="1">Gasolina 95 E5</option>
+                    <option value="3">Gasolina 98 E5</option>
+                    <option value="4">Gasóleo A</option>
+                    <option value="5">Gasóleo Premium</option>
+                </select>
+
+                <label for="open-now">
+                    <input type="checkbox" id="open-now" name="open-now">
+                    Open Now
+                </label>
+
+                <button type="submit">Apply Filters</button>
+            </form>
+        </section>
+
+        <section id="results">
+            <h2>Gas Stations</h2>
+            <ul id="gas-stations-list">
+                <li>No gas stations to display.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gas Station Finder</p>
+    </footer>
+
+    <canvas id="background"></canvas>
+</body>
+</html>
