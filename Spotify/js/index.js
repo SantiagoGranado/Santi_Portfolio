@@ -52,8 +52,8 @@ async function loadSongs() {
         allSongs = [
             {
                 id: 1,
-                title: "Mi Canción de Ejemplo",
-                artist: "Artista Ejemplar",
+                title: "Black Ops 2 Cancion",
+                artist: "Zarcort",
                 filepath: "./song/cancion.mp3",  // Asegúrate de que esta ruta es accesible
                 cover: "./song/caratula.jpg"       // Ruta a la imagen de la carátula
             },
