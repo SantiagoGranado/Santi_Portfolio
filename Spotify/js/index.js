@@ -55,7 +55,7 @@ async function loadSongs() {
                 title: "Mi Canción de Ejemplo",
                 artist: "Artista Ejemplar",
                 filepath: "./song/cancion.mp3",  // Asegúrate de que esta ruta es accesible
-                cover: "./song/caratula.png"       // Ruta a la imagen de la carátula
+                cover: "./song/caratula.jpg"       // Ruta a la imagen de la carátula
             },
             // Puedes agregar más canciones aquí si lo deseas
         ];
