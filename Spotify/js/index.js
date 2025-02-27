@@ -41,20 +41,36 @@ function getCurrentSongList() {
 // Main function to initially load songs
 async function loadSongs() {
     try {
+        // Comentamos la llamada a la API ya que el servidor está cerrado
+        /*
         const response = await fetch('http://informatica.iesalbarregas.com:7007/songs');
         const songs = await response.json();
         allSongs = songs;
+        */
+        
+        // Definir manualmente una lista de canciones
+        allSongs = [
+            {
+                id: 1,
+                title: "Mi Canción de Ejemplo",
+                artist: "Artista Ejemplar",
+                filepath: "./song/cancion.mp3",  // Asegúrate de que esta ruta es accesible
+                cover: "./song/caratula.png"       // Ruta a la imagen de la carátula
+            },
+            // Puedes agregar más canciones aquí si lo deseas
+        ];
         
         musicTable.innerHTML = '';
         
-        for (const song of songs) {
+        for (const song of allSongs) {
             const row = document.createElement('tr');
             row.classList.add('song-row');
             row.setAttribute('data-id', song.id);
             row.setAttribute('data-cover', song.cover);
             
             const heartClass = favoriteSongs.includes(song.id) ? 'bxs-heart' : 'bx-heart';
-            const duration = await formatDuration(song.filepath);
+            // Si no necesitas calcular la duración de forma dinámica, puedes establecer un valor fijo
+            const duration = "03:30";
             
             row.innerHTML = `
                 <td><i class='bx bx-play bx-sm'></i></td>
@@ -307,13 +323,13 @@ volumeControl.addEventListener('input', () => {
 
 volumeIcon.addEventListener('click', () => {
     if (audioPlayer.volume > 0) {
-        // Save current volume before muting
+        // Guardar el volumen actual antes de mutear
         volumeIcon.dataset.previousVolume = volumeControl.value;
         audioPlayer.volume = 0;
         volumeControl.value = 0;
         updateVolumeIcon(0);
     } else {
-        // Restore previous volume
+        // Restaurar el volumen previo
         const previousVolume = volumeIcon.dataset.previousVolume || 100;
         audioPlayer.volume = previousVolume / 100;
         volumeControl.value = previousVolume;
