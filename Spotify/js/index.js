@@ -54,7 +54,7 @@ async function loadSongs() {
                 id: 1,
                 title: "Black Ops 2 Cancion",
                 artist: "Zarcort",
-                filepath: "./song/cancion.mp3",  // Asegúrate de que esta ruta es accesible
+                filepath: "./song/song.mp3",  // Asegúrate de que esta ruta es accesible
                 cover: "./song/caratula.jpg"       // Ruta a la imagen de la carátula
             },
             // Puedes agregar más canciones aquí si lo deseas
