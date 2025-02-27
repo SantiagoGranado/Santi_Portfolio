@@ -69,8 +69,7 @@ async function loadSongs() {
             row.setAttribute('data-cover', song.cover);
             
             const heartClass = favoriteSongs.includes(song.id) ? 'bxs-heart' : 'bx-heart';
-            // Si no necesitas calcular la duración de forma dinámica, puedes establecer un valor fijo
-            const duration = "03:30";
+            
             
             row.innerHTML = `
                 <td><i class='bx bx-play bx-sm'></i></td>
